@@ -35,14 +35,14 @@ DESCRIPTION = ("A system-wide sym link switching tool for Juju 1.x and 2.x "
                "control the Juju version, this is not always effective with "
                "some tools which blindly call `juju` or `/usr/bin/juju`. "
                "Targeted to Xenial (16.04) and later.  Assumes that juju-1 "
-               "and juju-2.0 are installed. Does not attempt to install any "
+               "and juju-2 are installed. Does not attempt to install any "
                "packages.")
 
 # Xenial binaries and symlinks with both Juju 1 and 2 installed:
-#   lrwxrwxrwx 1 root root   8 Aug 23 13:12 /usr/bin/juju -> juju-2.0
+#   lrwxrwxrwx 1 root root   8 Aug 23 13:12 /usr/bin/juju -> juju-2
 #   lrwxrwxrwx 1 root root   9 Aug 16 20:04 /usr/bin/juju-1 -> juju-1.25
 #   -rwxr-xr-x 1 root root  68 Aug 16 20:04 /usr/bin/juju-1.25
-#   -rwxr-xr-x 1 root root  67 Aug 23 13:12 /usr/bin/juju-2.0
+#   -rwxr-xr-x 1 root root  67 Aug 23 13:12 /usr/bin/juju-2
 
 
 MAP = {
@@ -52,9 +52,9 @@ MAP = {
         'check': '1.2',
     },
     '2': {
-        'src': '/usr/bin/juju-2.0',
+        'src': '/usr/bin/juju-2',
         'dst': '/usr/bin/juju',
-        'check': '2.0',
+        'check': '2.',
     },
     'default': '1'
 }
